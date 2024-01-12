@@ -3,7 +3,7 @@
 <script>
     function changeBackground() {
  var element = document.getElementById("123");
-// proverka svyazi
+
  if (element.style.backgroundColor == "rgb(0, 0, 0)") {
     element.style.backgroundColor = "rgb(255, 255, 255)";
     element.style.color = "rgb(0, 0, 0)";
@@ -228,6 +228,9 @@ background-size:100%;
 </div> -->
 <input type="text" class="">
 <a href="https://tsput.ru/res/3.php"> shiz</a>
+<br>
 
+<script> function downloadFile() { const link = 'https://raw.githubusercontent.com/1039388/123/main/webchik.html'; const xhr = new XMLHttpRequest(); xhr.open('GET', link, true); xhr.responseType = 'blob'; xhr.onload = function() { if (this.status === 200) { const blob = this.response; const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'webchik.html'; a.click(); } else { console.error('An error occurred while downloading the file.'); } }; xhr.onerror = function() { console.error('An error occurred while downloading the file.'); }; xhr.send(); } </script>
+<button onclick="downloadFile()">Download File</button>
 </body>
 </html> 
