@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+//version 2.16
 <script>
     function changeBackground() {
  var element = document.getElementById("123");
-//version 2.15
+
  if (element.style.backgroundColor == "rgb(0, 0, 0)") {
     element.style.backgroundColor = "rgb(255, 255, 255)";
     element.style.color = "rgb(0, 0, 0)";
@@ -36,7 +37,13 @@
   .slavonic {
   font-family: 'Monomakh Unicode';
   font-stretch: 150%;
-
+  color: red;
+/*color:black;*/
+}
+  .slavonic2 {
+  font-family: 'Monomakh Unicode';
+  font-stretch: 150%;
+ color:#9F63F0; ;
 /*color:black;*/
 }
 a,h2,h1{
@@ -52,12 +59,12 @@ color: red;
    }
    A:visited {
 /*    color: #BF9877;*/
-color: red;
+color: inherit;
 /*    color: red;   */
 /*rgb(168,14,24)*/
    }
 A:active {
-    color:  #B41920;  
+    color:  inherit;  
 /*    Цвет активных ссылок */
 color:red;
    }
@@ -145,20 +152,24 @@ background-size:100%;
 <div class="blyat"  >
   </div>
 
-  <b><a style="font-size: 120%;"style="font-size: 135%;opacity: 0%" href="" ><div style="left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto">
+<!--   <b><a style="font-size: 120%;"style="font-size: 135%;opacity: 0%" href="" ><div style="left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto">
     <div style="left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/4824763" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden;background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRce0dkSr6-L8VrQEGxlWLJ6TAIl-fWRxbYdThNPEkSEmsZUYQiaTJqrCciI2PWLdGCiLI&usqp=CAU);opacity: 1;" title="±"></iframe></div>
-</div></a></b>
+</div></a></b>  -->
+ <!-- timer -->
    <a><div style="display: inline; margin-left: 1050px;"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D0%B2_%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%D1%85_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82" style="font-size:50px;color: skyblue ;"> *</a> <a href="http://nsu.ru/"><img style="background: whitesmoke; margin-top: 5px;" width="50" height="50" src="data:image/png;base64,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"></a> <a href="https://matrixcalc.org/ru/vectors.html"> <img style="margin-top: 5px;" width="50" height="50" src="https://sun9-26.userapi.com/c4336/u34369627/92229539/x_04d23a3a.jpg">  </a><a href="https://www.wolframalpha.com/"> <img style="margin-top: 5px;" width="50" height="50" src="https://p7.hiclipart.com/preview/308/957/207/wolfram-alpha-computer-icons-internet-email-%E8%88%B9%E8%88%B5logo.jpg"></a> </div> </a> 
    <br>  <br> 
    <a href="http://www.phys.nsu.ru/ok01">кафиры</a>
   <nobr> <br>
   <a style="text-align: right" href="https://docs.google.com/spreadsheets/d/1Tq7DnHZwUXm2IrbO-NOftlkXhOBP4h2_KiObBsI78uE/edit#gid=1361236756"> stirka</a> </nobr>
   <a align="right" href="https://lk.1clc.ru/DeviceCurrent/DevicesCurrent">платно</a> </nobr>
-  <h3 href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task1.pdf" style="font-size:23.5px">
-   <a> Функан:</a><a href="https://www.nsu.ru/n/physics-department/departments/doc/RF_5.pdf"> Бельхеева </a>,<a href="https://www.nsu.ru/n/physics-department/departments/doc/Aleksandrov_FourieSeries.pdf"> александров(фурыч </a>,<a href="http://phys.nsu.ru/arbuzov/literature/07_AleksandrovVA_D.pdf"> обобщ) </a>,<a href="http://phys.nsu.ru/arbuzov/literature/06_BugaevaSG_EgorovAA_LT.pdf"> Бугаева(лапласыч)</a> <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I.pdf">  всё </a>,, <a href="http://phys.nsu.ru/arbuzov/"> арбуз </a>, <a href="https://online.mephi.ru/courses/maths/nagornov_4_semestr/"> bezdari</a>
+  <h3>
+    <a>Анал.МЕХ </a><a href="https://www.nsu.ru/n/physics-department/uchebno-metodicheskie-posobiya/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%BE%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%BA%D0%B5/Kotkin2017.pdf"> Лекции <a style="font-size:16px">Г.Л.Коткин В.Г.Сербо</a> </a>, <a href="https://www.inp.nsk.su/~telnov/mech/uchebniki/Landau-TeorFiz_t1_mehanika.pdf">Ландау</a>, <a href="http://www.physics.gov.az/book_K/Goldstein.pdf"> Goldstein</a>,<a href="https://ikfia.ysn.ru/wp-content/uploads/2018/01/ArnoldKozlovNejshtadt1985ru.pdf">Арнольд</a> <a href="https://www.damtp.cam.ac.uk/user/tong/dynamics/clas.pdf">pendosi</a> <br> <a href="https://vk.com/topic-126803611_34182795"title="helper">h</a>
+</h3>
+  <h3 class="slavonic2" href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task1.pdf">
+  <a class="slavonic"> <a> Функан:</a><a href="https://www.nsu.ru/n/physics-department/departments/doc/RF_5.pdf"> Бельхеева </a>,<a href="https://www.nsu.ru/n/physics-department/departments/doc/Aleksandrov_FourieSeries.pdf"> александров(фурыч </a>,<a href="http://phys.nsu.ru/arbuzov/literature/07_AleksandrovVA_D.pdf"> обобщ) </a>,<a href="http://phys.nsu.ru/arbuzov/literature/06_BugaevaSG_EgorovAA_LT.pdf"> Бугаева(лапласыч)</a> , <a href="http://phys.nsu.ru/arbuzov/"> арбуз </a>, <a href="https://online.mephi.ru/courses/maths/nagornov_4_semestr/"> bezdari</a></a> <a href="https://www.nsu.ru/n/physics-department/about/prepodavateli/3464911/">Иванов</a>
     <br>
-    <td valign="top" class="slavonic">  
-      <p>&nbsp;&nbsp;&nbsp; <a href="http://phys.nsu.ru/arbuzov/lections.html" class="slavonic" style="color: wheat   ;font-size: 26px;">Лекции</a>        </p>              
+<!--     <td valign="top" class="slavonic">          
+     <p>&nbsp;&nbsp;&nbsp; <a href="http://phys.nsu.ru/arbuzov/lections.html" class="slavonic" style="color: wheat   ;font-size: 26px;">Лекции</a>        </p>
         <p class="slavonic"> &nbsp;&nbsp;&nbsp; <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_exam.pdf" target="_blank"><img src="http://phys.nsu.ru/arbuzov/image/pdf.png" width="30px" height="30px"> </a> <a class="slavonic" > Правила аттестации </a>
         </p><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="slavonic">Вопросы для экзамена: </a>
         </p><a class="slavonic"> &nbsp;&nbsp;&nbsp; <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_q1.pdf" target="_blank" class="slavonic"><img src="http://phys.nsu.ru/arbuzov/image/pdf.png" width="30px" height="30px"> </a>  <a class="slavonic">Блиц-опрос: определения, формулировки и примеры вопросов, на которые нужно будет отвечать  сразу без подготовки! </a>
@@ -168,16 +179,33 @@ background-size:100%;
 
 
 
-</p></td> 
+</p></td>  -->
     <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task1.pdf">
     1</a> 
         <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task2.pdf">
     2</a> <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task3.pdf">
     3
   
-  </a>
+  </a><a href="https://vk.com/topic-126803611_35454994"title="helper">h</a>
   </h3>
-  <h3 style="font-size:23.5px">
+  <h3 class="slavonic2">
+  <a href="http://phys.nsu.ru/pogosov" style="text-decoration: none; ">  ЭЛМАГ:</a> <a href="http://physics.gov.az/book_Ee/G_Meledin.pdf">задачник<font size="2" color="blue">Меледин Черкасский</font> </a>,,<a href="http://www.physics.gov.az/book_O/Sivuhin_III.pdf"> Сивухин </a>,<a href="https://e-physics.ru/lib/exe/fetch.php?media=%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2_1.pdf"> Яковлев ( 1 </a>, <a href="https://ephysics.ru/lib/exe/fetch.php?media=%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2_2.pdf">2</a>, <a href="https://e-physics.ru/lib/exe/fetch.php?media=%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2_3.pdf">3)</a>, <a href="http://lib.ysu.am/open_books/413749.pdf">Оптика.Бутиков</a>, <a href="https://ftfsite.ru/wp-content/files/fiz_feynman_6_eldinam_2.1.pdf"> Фейнман (1, </a><a href="https://ftfsite.ru/wp-content/files/fiz_feynman_5_elmag_2.1.pdf"> 2)</a>,<a href="https://tsput.ru/res/fizika/1/ELECTROSTATIKA/lection_08.html"> бимба </a>,<a href="file:///C:/Users/%D0%9C%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D1%8C/Downloads/Telegram%20Desktop/L_Landau_E_M_Lifshits_tom_8_elektrodinamika_sploshnykh_sred.pdf"> Ландау (элдин</a> ,<a href="https://starnew.inp.nsk.su/~telnov/mech/uchebniki/Landau-TeorFiz_t2_Pole.pdf"> pole</a> ) <a href="https://tsput.ru/res/fizika/1/KR_ELEC/l0.htm"> bimb</a> <br>
+    <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task1.pdf">
+    1</a> 
+        <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task2.pdf">
+    2</a> <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task3.pdf">
+    3  </a>      <a href="http://www.phys.nsu.ru/eldin/web/app.php/about"> zadachki</a>-<a href="http://www.phys.nsu.ru/cherk/Zadanie/zadaniya.htm"> Черкасский</a> 
+    <!-- <a href="http://ancient.hydro.nsc.ru/ephys/examples/eldyn/eldyn.html"> приколдес2</a> -->
+    <a href="https://vk.com/topic-126803611_34182552"title="helper">h</a>
+  </h3>
+  </h3>
+  <h3 class="slavonic2" >
+    <a >Диффурчики: </a><a href="https://kvm.gubkin.ru/pub/uok/FilippovDU.pdf" > задачник(филиппов)</a>,<a href="http://www.phys.nsu.ru/ok03/doc/Linsist_2014.pdf" > Balakina </a>,<a href="http://www.phys.nsu.ru/ok03/doc/volokitin_integr_sist_odu.pdf"style="color:#9F63F0;" > Волокитин-пердун(старый) </a>,<a href="http://www.phys.nsu.ru/ok03/doc/Domanova_Matr_exponenta.pdf"style="color:#9F63F0;" > e^A </a>, <a href="https://mipt.ru/upload/KolesnikovaSI.pdf"style="color:#9F63F0;" >Колесникова</a> <a href="https://e-lib.nsu.ru/reader/bookView.html?params=UmVzb3VyY2UtNzQ2MQ/cGFnZTAwMDAw"style="color:#9F63F0;" >Demidenko</a>,<a href="https://ikfia.ysn.ru/wp-content/uploads/2018/01/Elsgolc1969ru.pdf">Эльсгольц</a> <a href="https://ikfia.ysn.ru/wp-content/uploads/2018/01/Kamke_ODE_1971ru.pdf"style="color:#9F63F0;" >Камке</a> <br>
+
+    <a href="https://www.nsu.ru/upload/iblock/308/u8i9irgbjqskhh5lkptbj7b74j394skv/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D0%B8_%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D0%BE_%D0%BA%D1%83%D1%80%D1%81%D1%83_%D0%94%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F_2023-2024%20(3%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80).pdf">
+    123 </a> 
+  </h3>
+    <h3>
    <a> ТФКП: </a><a  href="https://djvu.online/file/MmvBbNcI1Hcwo" > задачник <font size="2">М.Л. Краснов, Г.И. Макаренко</font> </a>,<a  href="http://phys.nsu.ru/ok03/doc/sem_tfkp_0.pdf" > задачник <font size="2">бугаева</font> </a>,<a href="http://www.physics.gov.az/book_M/LAVRENTEV_SHABAT.PDF"> Лаврентьев </a> ,<a href="http://elibrary.sgu.ru/uch_lit/559.pdf"> Привалов </a> ,<a href="http://www.phys.nsu.ru/ok03/doc/TFKP_Berezin_Romanov.pdf"> Berezin</a>,<a href="http://www.phys.nsu.ru/ok03/doc/tfkp_Berezin.pdf"> Int</a>,<a href="https://mipt.ru/education/chair/mathematics/upload/fb1/sidorov-arph0dskar6.pdf"> Sidorov</a>,<a href="https://www.nsu.ru/n/physics-department/uchebno-metodicheskie-posobiya/%D0%9D%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0/Nekotorye_prilozheniya_kompleksnogo_analiza_Romanov_A_S_FF_NGU_2012_132s.pdf"> Romanov+</a>,<a href="http://www.phys.nsu.ru/ulyanov/"> ульянчик </a>
   <!--   <ul>
 <li><a href="http://www.phys.nsu.ru/ulyanov/TFKP-2023-exam-stages.pdf">Структура экзамена</a>
@@ -185,22 +213,8 @@ background-size:100%;
 </li><li><a href="http://www.phys.nsu.ru/ulyanov/TFKP-2023-exaquest.pdf">Теоретические вопросы</a>
 (<font color="#FFEE00"></font>)
 </li></ul><br> -->
-    <a href="http://www.phys.nsu.ru/ulyanov/assignment-1.pdf">
-    1</a> 
-        <a href="http://www.phys.nsu.ru/ulyanov/assignment-2.pdf">
-    2</a> <a href="http://www.phys.nsu.ru/ulyanov/assignment-3.pdf">
-    3 </a>
 
-  </h3>
-  <h3>
-  <a href="http://phys.nsu.ru/pogosov" style="text-decoration: none; ">  ЭЛМАГ:</a> <a href="http://physics.gov.az/book_Ee/G_Meledin.pdf">задачник<font size="2" color="blue">Меледин Черкасский</font> </a>,,<a href="http://www.physics.gov.az/book_O/Sivuhin_III.pdf"> Сивухин </a>,<a href="https://e-physics.ru/lib/exe/fetch.php?media=%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2_1.pdf"> Яковлев ( 1 </a>, <a href="https://ephysics.ru/lib/exe/fetch.php?media=%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2_2.pdf">2) </a>, <a href="https://ftfsite.ru/wp-content/files/fiz_feynman_6_eldinam_2.1.pdf"> Фейнман (1, </a><a href="https://ftfsite.ru/wp-content/files/fiz_feynman_5_elmag_2.1.pdf"> 2)</a>,<a href="https://tsput.ru/res/fizika/1/ELECTROSTATIKA/lection_08.html"> бимба </a>,<a href="file:///C:/Users/%D0%9C%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D1%8C/Downloads/Telegram%20Desktop/L_Landau_E_M_Lifshits_tom_8_elektrodinamika_sploshnykh_sred.pdf"> Ландау (элдин</a> ,<a href="https://starnew.inp.nsk.su/~telnov/mech/uchebniki/Landau-TeorFiz_t2_Pole.pdf"> pole</a> ) <a href="https://tsput.ru/res/fizika/1/KR_ELEC/l0.htm"> bimb</a> <br>
-    <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task1.pdf">
-    1</a> 
-        <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task2.pdf">
-    2</a> <a href="http://phys.nsu.ru/arbuzov/oFA/files/01program/oFA-I_task3.pdf">
-    3  </a>      <a href="http://www.phys.nsu.ru/eldin/web/app.php/about"> zadachki</a>-<a href="http://www.phys.nsu.ru/cherk/Zadanie/zadaniya.htm"> приколдес</a> <a href="http://ancient.hydro.nsc.ru/ephys/examples/eldyn/eldyn.html"> приколдес2</a>
-  </h3>
-  </h3><h3>
+  </h3><h3 class="slavonic2"  >
     <a>РЭЛ: </a><a href="https://kaf70.mephi.ru/content/public/uploads/files/iskusstvo_shemotehniki_t-1_p.horovic_1993.pdf"> Хоровиц </a><br>
 <!--     <select style="width:265px;color: wheat; background:black;font-size:18px;" name="useк" required="required">
   <option value="">№1</option>
@@ -217,14 +231,8 @@ background-size:100%;
 <a href="https://vk.com/doc514266670_669256350?hash=4nMIu43WDA2vWZAapTcUCls1FZl0ch9l8zeZ8z7Up7c&dl=G4pcWjXYFx2H7y6fv9E7ohJ80G2v6tRHDbNSZJHMavk">file</a>
  -->
 </h3>
-  <h3>
-    <a>Диффурчики: </a><a href="https://kvm.gubkin.ru/pub/uok/FilippovDU.pdf"> задачник(филиппов)</a>,<a href="http://www.phys.nsu.ru/ok03/doc/Linsist_2014.pdf"> Balakina </a>,<a href="http://www.phys.nsu.ru/ok03/doc/volokitin_integr_sist_odu.pdf"> Волокитин-пердун(старый) </a>,<a href="http://www.phys.nsu.ru/ok03/doc/Domanova_Matr_exponenta.pdf"> e^A </a>, <a href="https://mipt.ru/upload/KolesnikovaSI.pdf">Колесникова</a> <a href="https://e-lib.nsu.ru/reader/bookView.html?params=UmVzb3VyY2UtNzQ2MQ/cGFnZTAwMDAw">Demidenko</a>,<a href="https://ikfia.ysn.ru/wp-content/uploads/2018/01/Kamke_ODE_1971ru.pdf">Камке</a> <br>
-
-    <a href="https://www.nsu.ru/upload/iblock/308/u8i9irgbjqskhh5lkptbj7b74j394skv/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D0%B8_%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D0%BE_%D0%BA%D1%83%D1%80%D1%81%D1%83_%D0%94%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F_2023-2024%20(3%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80).pdf">
-    123 </a> 
-  </h3>
-     <h3 >
-  <a href="https://elmag.nsu.ru/doku.php"> <font size="5">  Лабы:</font></a>   <a href="http://www.phys.nsu.ru/electricity/Labworks.html"> <font size="5"> Лабы2</font><a/> 
+     <h3 style="color:wheat;" >
+  <a href="https://elmag.nsu.ru/doku.php"> <font size="5">  Лабы:</font></a>   <a href="http://www.phys.nsu.ru/optics/Labworks.html"> <font size="5"> Лабы2</font><a/> 
   </h3>
     <!--  <h3 >
   <a href="https://cpp-python-nsu.inp.nsk.su/"> <font size="5"> proga:</font> <a/> 
@@ -234,7 +242,7 @@ background-size:100%;
     </div> </div> -->
     <a class="text" href="https://www.youtube.com/watch?v=PkT0PJwy8mI"style="color: whitesmoke; background:black ;" > <font size="5"> proga ответы</font> <a/>
         <br>
-        <button onclick="changeBackground2()">Switch Background</button>
+        <button style="background: black;border:gray;border-style: groove;" onclick="changeBackground2()"> <a style="color: wheat;">Switch Background</a></button>
  <!-- <div id="element">This is an element</div> -->
 <br>
 <script> function downloadFile() { const link = 'https://raw.githubusercontent.com/1039388/123/main/webchik.html'; const xhr = new XMLHttpRequest(); xhr.open('GET', link, true); xhr.responseType = 'blob'; xhr.onload = function() { if (this.status === 200) { const blob = this.response; const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'webchik.html'; a.click(); } else { console.error('An error occurred while downloading the file.'); } }; xhr.onerror = function() { console.error('An error occurred while downloading the file.'); }; xhr.send(); } </script>
@@ -245,22 +253,24 @@ background-size:100%;
 
   <option   ><script src="https://gist.github.com/1039388/335565c7642273ce6c5e9720b4f51f70.js" style="width:100px"></script></option>
 </select>
-
+<br>
+<!-- 
 <div>
   <img style="opacity: 111.0; margin-left: 300px;width: 900px; " src="https://sun9-46.userapi.com/impg/Ruvix-hMXOjR481U6Q4yKczwx4rPuY-JbXl5nQ/n6yEaau-Ko0.jpg?size=884x531&quality=96&sign=200bf16334987aa05cb1383f98067410&type=album">
-</div>
+</div> -->
 <!-- <div>
   <img src="https://sun9-68.userapi.com/impg/zMzvsjn_SeXbDH-xhf0IwcPrxnvKnk8fVPkGsg/44b9n4xw3Fk.jpg?size=1301x572&quality=96&sign=8a1fee5456bcca9a1fbfd175667d76b4&type=album">
 </div> -->
-<!-- <input type="text" class=""> -->
+<input type="text" class="">
 <!-- <a href="https://tsput.ru/res/3.php"> shiz</a> -->
 <br>
-<!-- <a href="https://raw.githubusercontent.com/1039388/123/main/webchik.html">raw</a> -->
+<a href="https://raw.githubusercontent.com/1039388/123/main/webchik.html">raw</a>
 
 <br>
 <div style="display:none;">
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-b1e0dcd6-101c-4c66-b7c8-6d3fc55946de" data-elfsight-app-lazy></div>
 </div>
+<!-- <a href="http://www.warlog.ru/" target="_blank"><img border="0" src="http://www.warlog.ru/counter/?i=3003" alt="счетчик посещений" title="счетчик посещений" /></a> -->
 </body>
 </html> 
