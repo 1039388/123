@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-//version 2.17
+//version 2.181
 <script>
     function changeBackground() {
  var element = document.getElementById("123");
@@ -33,7 +33,19 @@
   margin-left: 600px;
   font-size: 150%;
 }*/
+#myButton {
+      background-image: url('path/to/your/image.jpg');
+      background-size: cover;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 150px;
+      height: 43px;
+    }
 
+    #myImage {
+      display: none;
+    }
   .slavonic {
   font-family: 'Monomakh Unicode';
   font-stretch: 150%;
@@ -229,7 +241,23 @@ background-size:100%;
  -->
 </h3>
      <h3 style="color:wheat;" >
-  <a href="http://www.phys.nsu.ru/optics/Labworks.html"> <font size="5"> Лабы.optica</font><a/> <a href="https://vk.com/topic-126803611_35476377"title="helper">h</a><br> <a href="https://www.nsu.ru/n/physics-department/departments/kafedra-radiofiziki/#ask_question" style="color: wheat;"> <font size="5">  Кафедра(рэл)</font></a>&nbsp;<a href="https://vk.com/topic-126803611_39189850"title="helper">h</a> 
+  <a href="http://www.phys.nsu.ru/optics/Labworks.html"> <font size="5"> Лабы.optica</font><a/> <a href="https://vk.com/topic-126803611_35476377"title="helper">h</a>
+ <button id="myButton">Справка по методичкам</button>
+  <img id="myImage" src="https://sun9-64.userapi.com/impg/hGbB-bg5Z2gbNVNxHJoqKRzHN28gcpc9r4AiOw/jJh4DRiJ3B0.jpg?size=1620x2160&quality=95&sign=333e53c4f0f9885b348cde4a9498197a&type=album" alt="My Image" width="700px" height="1000px" style="opacity:1.0">
+    <script>
+    const button = document.getElementById('myButton');
+    const image = document.getElementById('myImage');
+
+    button.addEventListener('click', () => {
+      if (image.style.display === 'none') {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  </script>
+
+  <br> <a href="https://www.nsu.ru/n/physics-department/departments/kafedra-radiofiziki/#ask_question" style="color: wheat;"> <font size="5">  Кафедра(рэл)</font></a>&nbsp;<a href="https://vk.com/topic-126803611_39189850"title="helper">h</a> 
   </h3>
   <p>
  <b  style="color:wheat;" >Методические руководства к Практикуму по радиоэлектронике</b>:<br>
@@ -276,5 +304,6 @@ background-size:100%;
 <div class="elfsight-app-b1e0dcd6-101c-4c66-b7c8-6d3fc55946de" data-elfsight-app-lazy></div>
 </div>
 
+ <!-- <img src="https://sun9-64.userapi.com/impg/hGbB-bg5Z2gbNVNxHJoqKRzHN28gcpc9r4AiOw/jJh4DRiJ3B0.jpg?size=1620x2160&quality=95&sign=333e53c4f0f9885b348cde4a9498197a&type=album" width="700px" height="1000px"> -->
 </body>
 </html> 
