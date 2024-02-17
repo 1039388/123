@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-//version 2.2
+//version 2.21
 <script>
     function changeBackground() {
  var element = document.getElementById("123");
@@ -48,6 +48,15 @@
       width: 150px;
       height: 43px;
     }
+#myButton2 {
+      background-image: url('path/to/your/image.jpg');
+      background-size: cover;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 150px;
+      height: 43px;
+    }
 #myButton1 {
       background-image: url('path/to/your/image.jpg');
       background-size: cover;
@@ -59,6 +68,9 @@
     }
 
     #myImage1 {
+      display: none;
+    }
+    #myImage2 {
       display: none;
     }
     #myImage {
@@ -315,7 +327,7 @@ background-size:100%;
  <!-- <div id="element">This is an element</div> -->
 <br>
 <script> function downloadFile() { const link = 'https://raw.githubusercontent.com/1039388/123/main/webchik.html'; const xhr = new XMLHttpRequest(); xhr.open('GET', link, true); xhr.responseType = 'blob'; xhr.onload = function() { if (this.status === 200) { const blob = this.response; const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'webchik.html'; a.click(); } else { console.error('An error occurred while downloading the file.'); } }; xhr.onerror = function() { console.error('An error occurred while downloading the file.'); }; xhr.send(); } </script>
-<button style="background: black;border:gray;border-style: groove;" onclick="downloadFile()"onmouseover> <a style="color:white;">Обновочки</a></button>
+
   <button id="background-button1-1" class="background-button1"> 1</button>
     <button id="background-button1-2" class="background-button1"> 2</button>
     <button id="background-button1-3" class="background-button1"> 3</button>
@@ -349,7 +361,8 @@ background-size:100%;
                 localStorage.setItem('backgroundImageIndex', i);
             });
         }
-    </script>
+    </script><br>
+    <button style="background: black;border:gray;border-style: groove;" onclick="downloadFile()"onmouseover> <a style="color:white;">Обновочки</a></button>
 </div>  
   <select style="width:243px;color: wheat; background:black;font-size:13px;" name="useк" required="required">
 
@@ -363,16 +376,14 @@ background-size:100%;
 <!-- <div>
   <img src="https://sun9-68.userapi.com/impg/zMzvsjn_SeXbDH-xhf0IwcPrxnvKnk8fVPkGsg/44b9n4xw3Fk.jpg?size=1301x572&quality=96&sign=8a1fee5456bcca9a1fbfd175667d76b4&type=album">
 </div> -->
-<input type="text" class="">
+<!-- <input type="text" class=""> -->
 <!-- <a href="https://tsput.ru/res/3.php"> shiz</a> -->
 <br>
 <!-- <a href="https://raw.githubusercontent.com/1039388/123/main/webchik.html">raw</a> -->
-<br>
-<div style="display:none;">
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-b1e0dcd6-101c-4c66-b7c8-6d3fc55946de" data-elfsight-app-lazy></div>
-</div>
- 
+    <div style="display:none;">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-b1e0dcd6-101c-4c66-b7c8-6d3fc55946de" data-elfsight-app-lazy></div>
+    </div>
     <button id="background-button-2" class="background-button"> 2</button>
     <button id="background-button-1" class="background-button"> 1</button>
     <button id="background-button-3" class="background-button"> 3</button>
@@ -407,5 +418,22 @@ background-size:100%;
             });
         }
     </script>
+<br>
+<br>
+     <button id="myButton2">Расписание контрольных</button>
+  <img id="myImage2" src="https://sun9-70.userapi.com/impg/uIgQe9UTMUIRDiXpwB4L9a-77ulZGfJ15u0BKA/wzRtMEOuOG4.jpg?size=1461x340&quality=96&sign=1f406d7c90195023924d2c3ae6cd7a9a&type=album" alt="My Image" width="1300px" height="350px" style="opacity:1.0">
+
+    <script>
+    const button2 = document.getElementById('myButton2');
+    const image2 = document.getElementById('myImage2');
+
+    button2.addEventListener('click', () => {
+      if (image2.style.display === 'none') {
+        image2.style.display = 'block';
+      } else {
+        image2.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html> 
