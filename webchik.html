@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-//version 2.22
+//version 2.24
 <script>
     function changeBackground() {
  var element = document.getElementById("123");
@@ -89,6 +89,18 @@
       height: 43px;
     }
     #myImage1ю1 {
+      display: none;
+    }
+#myButton1ю2 {
+      background-image: url('path/to/your/image.jpg');
+      background-size: cover;
+      border: none;
+      padding: 3px;
+      cursor: pointer;
+      width: 50px;
+      height: 43px;
+    }
+    #myImage1ю2 {
       display: none;
     }#myButton25 {
       background-image: url('path/to/your/image.jpg');
@@ -239,7 +251,8 @@ background-size:100%;
    ><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D0%B2_%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%D1%85_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82" style="font-size:50px;color: skyblue ;"> *</a> <a href="http://nsu.ru/"><img style="background: whitesmoke; margin-top: 5px;" width="50" height="50" src="data:image/png;base64,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"></a> 
    <a href="https://matrixcalc.org/ru/vectors.html"> <img style="margin-top: 5px;" width="50" height="50" src="https://sun9-26.userapi.com/c4336/u34369627/92229539/x_04d23a3a.jpg">  </a>
    <a href="https://www.wolframalpha.com/"> <img style="margin-top: 5px;" width="50" height="50" src="https://p7.hiclipart.com/preview/308/957/207/wolfram-alpha-computer-icons-internet-email-%E8%88%B9%E8%88%B5logo.jpg"></a> 
-   <a href="https://www.desmos.com/calculator?lang=ru"> <img style="margin-top: 5px;" width="50" height="50" src="https://media.licdn.com/dms/image/C5622AQHhenR9o1LQ0Q/feedshare-shrink_2048_1536/0/1607142334516?e=2147483647&v=beta&t=aMxPXabZsOdbpyrrQ-Fg3-CHgZh6urVE7x1IrSfEaPY"></a>
+   <a href="https://www.desmos.com/calculator?lang=ru"> <img style="margin-top: 5px;" width="50" height="50" src="https://media.licdn.com/dms/image/C5622AQHhenR9o1LQ0Q/feedshare-shrink_2048_1536/0/1607142334516?e=2147483647&v=beta&t=aMxPXabZsOdbpyrrQ-Fg3-CHgZh6urVE7x1IrSfEaPY"></a> 
+      <a href="https://planetcalc.ru/5992/"> <img style="margin-top: 5px;" width="50" height="50" src="https://media.licdn.com/dms/image/C5622AQHhenR9o1LQ0Q/feedshare-shrink_2048_1536/0/1607142334516?e=2147483647&v=beta&t=aMxPXabZsOdbpyrrQ-Fg3-CHgZh6urVE7x1IrSfEaPY"></a> 
 </div> </a> 
    <br>  <br> 
    <a href="http://www.phys.nsu.ru/ok01">кафиры</a>
@@ -264,7 +277,7 @@ background-size:100%;
   </script>
   <button id="myButton1ю1" style="height: 20px;width: 50px;">Мес2</button>
 
-  <img id="myImage1ю1" src="https://sun9-42.userapi.com/impg/LYB5Z8EfA84CMA0GmXvTaMJ6K5L-dE-6S4xMVw/DyBdfhC2VB4.jpg?size=1015x1076&quality=96&sign=d510173eabb2dfa6456958da168feb02&type=album" alt="My Image" width="900px" height="1000px" style="opacity:1.0"> <a href="https://vk.com/topic-126803611_34182795"title="helper">h</a>
+  <img id="myImage1ю1" src="https://sun9-42.userapi.com/impg/LYB5Z8EfA84CMA0GmXvTaMJ6K5L-dE-6S4xMVw/DyBdfhC2VB4.jpg?size=1015x1076&quality=96&sign=d510173eabb2dfa6456958da168feb02&type=album" alt="My Image" width="900px" height="1000px" style="opacity:1.0"> 
     <script>
     const button5 = document.getElementById('myButton1ю1');
     const image5 = document.getElementById('myImage1ю1');
@@ -274,6 +287,21 @@ background-size:100%;
         image5.style.display = 'block';
       } else {
         image5.style.display = 'none';
+      }
+    });
+  </script>
+  <button id="myButton1ю2" style="height: 20px;width: 50px;">Мес3</button>
+
+  <img id="myImage1ю2" src="https://sun9-80.userapi.com/impg/zYkZP0YrBC9UECg90TmjCDBxMbSh1JlLrNq4Rw/K_K6ZBFSg8M.jpg?size=834x826&quality=96&sign=3dc2cf9951a48a7cb44ef37b3ec3320c&type=album" alt="My Image" width="900px" height="1000px" style="opacity:1.0"> <a href="https://vk.com/topic-126803611_34182795"title="helper">h</a>
+    <script>
+    const button25 = document.getElementById('myButton1ю2');
+    const image25 = document.getElementById('myImage1ю2');
+
+    button25.addEventListener('click', () => {
+      if (image25.style.display === 'none') {
+        image25.style.display = 'block';
+      } else {
+        image25.style.display = 'none';
       }
     });
   </script>
@@ -305,10 +333,11 @@ background-size:100%;
 
   <a href="file:///C:/Users/%D0%9C%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D1%8C/Downloads/Telegram%20Desktop/L_Landau_E_M_Lifshits_tom_8_elektrodinamika_sploshnykh_sred.pdf"> Ландау (элдин</a> ,<a href="https://starnew.inp.nsk.su/~telnov/mech/uchebniki/Landau-TeorFiz_t2_Pole.pdf">pole</a>) <a href="https://e-lib.nsu.ru/reader/bookView.html?params=UmVzb3VyY2UtNTkyNA/cGFnZTAwMDAw#">Pogosov</a> <a href="https://tsput.ru/res/fizika/1/KR_ELEC/l0.htm"> bimb</a> <br>
     <a>
-    <select style="width:262px; background:black;font-size:21px;color: greenyellow; height:30px" name="useк" class="slavonic2" required="required">
+    <select style="width:352px; background:black;font-size:21px;color: greenyellow; height:30px" name="useк" class="slavonic2" required="required">
   <option style="font-size: 25px;color: floralwhite;" value="">Месы</option>
   <option style="font-size: 25px;" value="1">1.8|1.18|1.20|1.28|2.27|2.35</option>
-</select></a> 
+
+  <option style="font-size: 25px;" value="2"> 1.34| 1.37б |3.15|3.47|3.77|3.95|3.105</option></select></a> 
               <a href="http://www.phys.nsu.ru/eldin/web/app.php/about"> zadachki</a>-<a href="http://www.phys.nsu.ru/cherk/Zadanie/zadaniya.htm"> Черкасский</a> 
     <!-- <a href="http://ancient.hydro.nsc.ru/ephys/examples/eldyn/eldyn.html"> приколдес2</a> -->
     <a href="https://vk.com/topic-126803611_34182552"title="helper">h</a>
@@ -440,7 +469,8 @@ background-size:100%;
 <!-- <a href="https://tsput.ru/res/3.php"> shiz</a> -->
 
 <!-- <a href="https://raw.githubusercontent.com/1039388/123/main/webchik.html">raw</a> -->
-    
+    <br>
+
     <div style="display:none;">
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-b1e0dcd6-101c-4c66-b7c8-6d3fc55946de" data-elfsight-app-lazy></div>
